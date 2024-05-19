@@ -1,5 +1,7 @@
 {
   "satellite": "LANDSAT/GLS2005_L7",
+  "start": "2005-01-01",
+  "end": "2023-12-31",
   "polygon": [
     {
       "lat": 60.572,

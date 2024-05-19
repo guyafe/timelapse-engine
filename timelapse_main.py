@@ -11,6 +11,12 @@ def main():
     ee.Authenticate()
     ee.Initialize(project='timelapse-sample')
     timelapse_info = load_timelapse_info()
+    build_timelapse_animation(timelapse_info)
+
+
+def build_timelapse_animation(timelapse_info):
+    print(f"Building timelapse animation from satellite: {timelapse_info.satellite}")
+    satellite_collection = ee.ImageCollection(timelapse_info.satellite)
 
 
 def load_timelapse_info():
