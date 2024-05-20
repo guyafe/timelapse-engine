@@ -4,6 +4,11 @@
   "end": "2024-01-19",
   "max_pixel_value": 65545,
   "rgb_bands": ["SR_B3", "SR_B2", "SR_B1"],
+  "dimensions": 1000,
+  "folder": "timelapse",
+  "file_prefix": "timelapse_1000px",
+  "description": "description",
+  "frames_per_second": 2,
   "geo_json": {
     "type": "Polygon",
     "coordinates": [[

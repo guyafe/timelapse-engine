@@ -27,10 +27,10 @@ def build_timelapse_animation(timelapse_info):
                             .select(timelapse_info.rgb_bands)  # Select RGB bands
                             .map(lambda image: convert_bit(image, timelapse_info.max_pixel_value)))  # Convert to 8-bit
     print("Exporting timelapse animation to Google Drive...")
-    out = Export.video.toDrive(satellite_collection, description='timelapse', maxFrames=10000, dimensions=720,
-                               framesPerSecond=2, folder="timelapse", fileNamePrefix="timelapse", maxPixels=1e12)
+    out = Export.video.toDrive(satellite_collection, description=timelapse_info.description, maxFrames=10000,
+                               dimensions=timelapse_info.dimensions, framesPerSecond=timelapse_info.frames_per_second,
+                               folder=timelapse_info.folder, fileNamePrefix=timelapse_info.file_prefix, maxPixels=1e13)
     out.start()
-    out.active()
     print("Timelapse animation has been exported to Google Drive")
 
 
